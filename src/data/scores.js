@@ -205,6 +205,8 @@ const scores = [
     type: "Piano",
     category: "Solo",
     instruments: ["Piano"],
+    shortdescription:
+      "A short solo piano piece harmonically inspired by Ryuichi Sakamoto",
     description:
       "During the summer holiday, I spent some time studying pieces by composers I really admire. \n\nFor this "+
       "particular piece, I was especially inspired by Ryuichi Sakamoto’s harmonic language, which is very "+
