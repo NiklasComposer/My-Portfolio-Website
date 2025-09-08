@@ -8,11 +8,13 @@ import Contact from "./pages/Contact";
 import ScoreDetail from "./pages/ScoreDetail";
 import MediaDetail from "./pages/MediaDetail";
 import ThankYou from "./components/ThankYou";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <Router>
       <Layout>
+        <ScrollToTop /> {/* Scroll-to-Top immer aktiv */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/scores" element={<Scores />} />

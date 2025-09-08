@@ -13,13 +13,13 @@ export default function Scores() {
       : scores.filter((s) => s.category === filter);
 
   return (
-    <section className="max-w-6xl mx-auto px-6 py-20">
+    <section className="max-w-6xl mx-auto px-6 py-20 overflow-x-hidden">
       <h2 className="text-3xl md:text-4xl font-heading mb-10 text-center">
         Complete Scores
       </h2>
 
       {/* Filter Buttons */}
-      <div className="flex justify-center gap-4 mb-12">
+      <div className="flex justify-center gap-4 mb-12 flex-wrap">
         {["All", "Solo", "Chamber", "Orchestral"].map((cat) => (
           <button
             key={cat}
@@ -27,8 +27,8 @@ export default function Scores() {
             className={`px-4 py-2 rounded-lg font-medium transition 
               ${
                 filter === cat
-                  ? "bg-accent text-dark"          // Aktive Kategorie
-                  : "bg-card text-secondary hover:bg-highlight hover:text-dark" // Inaktive Kategorie
+                  ? "bg-accent text-dark"
+                  : "bg-card text-secondary hover:bg-highlight hover:text-dark"
               }`}
           >
             {cat}
@@ -36,9 +36,8 @@ export default function Scores() {
         ))}
       </div>
 
-
       {/* Score Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full justify-items-center">
         {filteredScores
           .slice()
           .sort((a, b) => new Date(b.date) - new Date(a.date)) // neueste zuerst
@@ -46,30 +45,29 @@ export default function Scores() {
             <Link
               key={score.id}
               to={`/scores/${score.id}`}
-              className="bg-card rounded-lg flex flex-col items-center p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg cursor-pointer"
+              className="bg-card rounded-lg flex flex-col justify-between p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg cursor-pointer w-full min-w-[250px] h-[460px]"
             >
               {/* Titel */}
-              <h3 className="text-xl font-heading mb-4 text-secondary text-center">
+              <h3 className="text-xl font-heading mb-4 text-secondary text-center break-words">
                 {score.title}
               </h3>
 
-              {/* Bild mit festem Seitenverhältnis */}
-              <div className="w-full  aspect-[4/5] bg-card rounded-md mb-6 overflow-hidden">
+              {/* Bild */}
+              <div className="w-full h-72 bg-card rounded-md mb-6 overflow-hidden flex items-center justify-center">
                 <img
                   src={score.image}
                   alt={score.title}
-                  className="w-full h-full object-contain"
+                  className="max-h-full object-contain"
                 />
               </div>
-
+              
               {/* Badge / Type */}
-              <span className="px-3 py-1 bg-highlight text-dark font-medium rounded-full text-sm">
+              <span className="px-3 py-1 bg-highlight text-dark font-medium rounded-full text-sm self-center">
                 {score.type}
               </span>
             </Link>
           ))}
       </div>
-
     </section>
   );
 }

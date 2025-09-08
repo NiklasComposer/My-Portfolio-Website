@@ -65,7 +65,7 @@ const mediaProjects = [
     thumbnail: "/images/media/06_Marry_Me_Ending.png",
     description:
       "A retro-inspired soundtrack for a student-made pixel platformer project.",
-    youtubeId: "woPSjrn60ZE",
+    youtubeId: "YJT0UzW603c",
   },
   { // Closing Time
     id: 6,
