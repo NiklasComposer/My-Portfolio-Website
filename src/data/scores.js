@@ -215,6 +215,25 @@ const scores = [
       "so I tried to incorporate some of it into this piece.",
     youtubeId: "0yVfd6os1zQ",
   },
+  { // The other Night
+    id: 15,
+    title: "The other Night",
+    image: "/images/scores/16_The_other_Night.jpg",
+    date: "2025-10-02",
+    type: "Orchestral",
+    category: "Orchestral",
+    instruments: ["Glockenspiel", "Harp", "Piano", "Violin 1", "Violin 2", "Violas", "Celli", "Basses"],
+    shortdescription:
+      "A beautiful piece for Glockenspiel, Harp, Piano and String Ensemble. An instrument combination inspired "+
+      "by The Sixth Station by Joe Hisaishi.",
+    description:
+      "The other Night is a beautiful piece for Glockenspiel, Harp, Piano and String Ensemble."+
+      "I got the idea for this instrumentation when I was listening to The Sixth Station by Joe Hisaishi, "+
+      "especially the parts where the piano is doubled with the glockenspiel. I also did a lot of experimenting "+
+      "with parallel fourths when creating the melody. \n\n I was also reading White Nights by Fyodor Dostoyevsky "+
+      "while composing this piece. That's where the name originates.",
+    youtubeId: "twnU_amUV5Y",
+  },
 ];
 
 export default scores;

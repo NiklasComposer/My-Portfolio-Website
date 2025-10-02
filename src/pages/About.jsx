@@ -27,7 +27,7 @@ export default function About() {
           </p>
           <p>
             I mainly work with Cubase and Dorico, blending classical orchestration with modern production 
-            tools. Beyond music, I enjoy reading, exploring philosophy (especially Stoicism), and of course, 
+            tools. Beyond music, I enjoy reading mangas, webtoons or classical literature, exploring philosophy, and of course, 
             playing video games. Especially JRPGs like Octopath Traveler and the Dragon Quest series.
           </p>
           <p>
